@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkus Navigator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 3rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            width: 100%;
+            max-width: 520px;
+            padding: 0 1.5rem;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-btn:active {
+            transform: translateY(0);
+        }
+
+        .nav-btn.brand-guide {
+            background-color: #1a1a2e;
+            color: #7c83ff;
+            border-color: rgba(124, 131, 255, 0.15);
+        }
+        .nav-btn.brand-guide:hover {
+            background-color: #1f1f38;
+        }
+
+        .nav-btn.cipher {
+            background-color: #1a2e1a;
+            color: #66cc66;
+            border-color: rgba(102, 204, 102, 0.15);
+        }
+        .nav-btn.cipher:hover {
+            background-color: #1f381f;
+        }
+
+        .nav-btn.apollo {
+            background-color: #2e1a1a;
+            color: #cc6666;
+            border-color: rgba(204, 102, 102, 0.15);
+            pointer-events: none;
+            opacity: 0.45;
+        }
+
+        .nav-btn.arkus {
+            background-color: #2e2a1a;
+            color: #ccaa66;
+            border-color: rgba(204, 170, 102, 0.15);
+            pointer-events: none;
+            opacity: 0.45;
+        }
+
+        .badge {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: #888;
+        }
+
+        footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: #333;
+        }
+
+        @media (max-width: 480px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Arkus Navigator</h1>
+    <p class="subtitle">Internal Tools &amp; Resources</p>
+
+    <div class="nav-grid">
+        <a href="https://brand-guide-production.up.railway.app/" target="_blank" rel="noopener" class="nav-btn brand-guide">
+            Brand Guide
+        </a>
+        <a href="https://cipher-lime.vercel.app/" target="_blank" rel="noopener" class="nav-btn cipher">
+            Cipher
+        </a>
+        <span class="nav-btn apollo">
+            Apollo <span class="badge">soon</span>
+        </span>
+        <span class="nav-btn arkus">
+            Arkus <span class="badge">soon</span>
+        </span>
+    </div>
+
+    <footer>&copy; 2026 Arkus</footer>
+</body>
+</html>
